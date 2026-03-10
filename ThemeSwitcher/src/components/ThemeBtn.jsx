@@ -7,8 +7,6 @@ function ThemeBtn() {
     const {themeMode,lightTheme,darkTheme}=useTheme()
     const onChangeBtn=(e)=>{
         const darkModeStatus=e.currentTarget.checked
-        console.log(darkModeStatus);
-        
         if (darkModeStatus){
             darkTheme()
         }else{
@@ -16,9 +14,6 @@ function ThemeBtn() {
         }
         
     }
-    useEffect(() => {
-  console.log("Btn theme:", themeMode)
-}, [themeMode])
     return(
           <label className="relative inline-flex items-center cursor-pointer">
             <input
